@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comic Page</title>
+    <body>
+      <script>
+        function sanitizeHTML(html) {
+          let div = document.createElement("div");
+          div.textContent = html;
+          return div.innerHTML;
+        }
+
+        async function displayComic() {
+          try {
+            // Send a GET request to the first URL with the email as a query parameter
+            let email = "a.barabanova@innopolis.university";
+            let params = new URLSearchParams({ email: email });
+            let response = await fetch(
+              "https://fwd.innopolis.university/api/hw2?" + params.toString()
+            );
+            let data = await response.json();
+            console.log(data);
+
+            // Get the comic id from the response and sanitize it
+            let comicId = sanitizeHTML(data.id);
+
+            // Now send a GET request to the second URL with the comic id as a query parameter
+            let comicParams = new URLSearchParams({ id: comicId });
+            let comicResponse = await fetch(
+              "https://fwd.innopolis.university/api/comic?" +
+                comicParams.toString()
+            );
+            let comicData = await comicResponse.json();
+
+            // Create and append an img element to display the comic
+            let img = document.createElement("img");
+            img.src = sanitizeHTML(comicData.img); // sanitize the source
+            img.alt = sanitizeHTML(comicData.alt); // sanitize the alternative text
+
+            // Create and append a p element to display the title
+            let title = document.createElement("p");
+            title.textContent = sanitizeHTML(comicData.title); // sanitize the title
+
+            // Create and append another p element to display the date
+            let date = document.createElement("p");
+            let dateObj = new Date(sanitizeHTML(comicData.date)); // sanitize the date
+            date.textContent = dateObj.toLocaleDateString();
+
+            // Append all elements to the body
+            document.body.appendChild(title);
+            document.body.appendChild(img);
+            document.body.appendChild(date);
+          } catch (error) {
+            console.error("Error:", error);
+          }
+        }
+
+        displayComic();
+      </script>
+    </body>
+  </head>
+</html>
