@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anastasia Barabanova - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
   <header>
@@ -15,8 +15,7 @@
         <li><a href="#about-me">About Me</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="hw2.html">Homework 2</a></li>
-
+        <li><a href="comic.html">Homework 2</a></li>
       </ul>
     </nav>
   </header>
@@ -35,7 +34,7 @@
     </ul>
   </div>
 
-  <div id="arrow">
+  <div id="arrow-top">
     <a href="#about-me"><img src="images/arrow-icon.png" alt="Arrow Icon"></a>
   </div>
 
@@ -46,66 +45,65 @@
         <p id="about-p">Hi there! I am Anastasia Barabanova, a 20 year old software developer at the Innopolis University. During the learning process, I
           received basic knowledge for work in the field of IT, also participated in the development of several projects. I am interested in 
           the development of web applications. I am looking for an internship in the field of web development, where I can apply my knowledge and gain new experience.</p>
-        </p>
       </div>
       <div class="right-side">
         <img src="images/myphoto.png" alt="My photo">
       </div>
-    </section>
+    </div>
+  </section>
 
-<div id="arrow">
-  <a href="#skills"><img src="images/arrow-icon.png" alt="Arrow Icon"></a>
-</div>
-
-<section id="skills">
-  <h1 id="about-me-h">—Skills—</h1>
-  <ul id="skills-list">
-    <li>
-      <img class="app-icon" src="images/python-icon.png" alt="Python Icon">
-      <span>Python</span>
-      <img class="rating-icon" src="images/stars4-5.png" alt="Rating Icon">
-    </li>
-    <li>
-      <img class="app-icon" src="images/js-icon.png" alt="JS Icon">
-      <span>JavaScript</span>
-      <img class="rating-icon" src="images/stars3-5.png" alt="Rating Icon">
-    </li>
-    <li>
-      <img class="app-icon" src="images/bd-icon.png" alt="SQL Icon">
-      <span>SQL</span>
-      <img class="rating-icon" src="images/stars3-5.png" alt="Rating Icon">
-    </li>
-    <li>
-      <img class="app-icon" src="images/git-icon.png" alt="Git Icon">
-      <span>Git</span>
-      <img class="rating-icon" src="images/stars4-5.png" alt="Rating Icon">
-    </li>
-  </ul>
-</section>
-
-
-<div id="arrow">
-  <a href="#projects"><img src="images/arrow-icon.png" alt="Arrow Icon"></a>
-</div>
-
-<section id="projects">
-  <h1 id="about-me-h">—Projects—</h1>
-  <div class="project-container">
-    <article>
-      <img class="project-img-film" src="images/film-project.png" alt="Film image">
-      <h2 id="name-project"><a href="https://github.com/ananastya1/Streaming-service">Application to show and filter list of films</a></h2>
-      <p id="description-project">This is a training project with which I learned how to work with
-        Docker, Git, GitHub Actions, PostgreSQL. I wrote frontend part of the project, deployed the application.</p>
-    </article>
-    
-    <article>
-      <img class="project-img-tree" src="images/tree-project.png" alt="Student icon">
-      <h2 id="name-project"><a href="https://github.com/InnoSWP/syntax-tree-visualization">Syntax tree visualizator</a></h2>
-      <p id="description-project">Syntax Tree Visualizer provides interactive environment for 
-        exploration of abstract syntax tree and syntax array. It is written with TypeScript, Node.js, Yarn. My part of project is frontend.</p>
-    </article>
+  <div id="arrow-about">
+    <a href="#skills"><img src="images/arrow-icon.png" alt="Arrow Icon"></a>
   </div>
-</section>
+
+  <section id="skills">
+    <h1 id="skills-h">—Skills—</h1>
+    <ul id="skills-list">
+      <li>
+        <img class="app-icon" src="images/python-icon.png" alt="Python Icon">
+        <span>Python</span>
+        <img class="rating-icon" src="images/stars4-5.png" alt="Rating Icon">
+      </li>
+      <li>
+        <img class="app-icon" src="images/js-icon.png" alt="JS Icon">
+        <span>JavaScript</span>
+        <img class="rating-icon" src="images/stars3-5.png" alt="Rating Icon">
+      </li>
+      <li>
+        <img class="app-icon" src="images/bd-icon.png" alt="SQL Icon">
+        <span>SQL</span>
+        <img class="rating-icon" src="images/stars3-5.png" alt="Rating Icon">
+      </li>
+      <li>
+        <img class="app-icon" src="images/git-icon.png" alt="Git Icon">
+        <span>Git</span>
+        <img class="rating-icon" src="images/stars4-5.png" alt="Rating Icon">
+      </li>
+    </ul>
+  </section>
+
+  <div id="arrow-skills">
+    <a href="#projects"><img src="images/arrow-icon.png" alt="Arrow Icon"></a>
+  </div>
+
+  <section id="projects">
+    <h1 id="projects-h">—Projects—</h1>
+    <div class="project-container">
+      <article>
+        <img class="project-img-film" src="images/film-project.png" alt="Film image">
+        <h2 class="name-project"><a href="https://github.com/ananastya1/Streaming-service">Application to show and filter list of films</a></h2>
+        <p class="description-project">This is a training project with which I learned how to work with
+          Docker, Git, GitHub Actions, PostgreSQL. I wrote frontend part of the project, deployed the application.</p>
+      </article>
+      
+      <article>
+        <img class="project-img-tree" src="images/tree-project.png" alt="Student icon">
+        <h2 class="name-project"><a href="https://github.com/InnoSWP/syntax-tree-visualization">Syntax tree visualizator</a></h2>
+        <p class="description-project">Syntax Tree Visualizer provides interactive environment for 
+          exploration of abstract syntax tree and syntax array. It is written with TypeScript, Node.js, Yarn. My part of the project is frontend.</p>
+      </article>
+    </div>
+  </section>
 
 </body>
 </html>

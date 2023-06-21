@@ -17,7 +17,7 @@ header {
 }
 
 header ul {
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 
@@ -26,7 +26,6 @@ header li {
   display: inline;
   margin: 0 10px;
 }
-
 
 header a {
   color: black;
@@ -56,8 +55,6 @@ header a:hover {
   height: auto;
 }
 
-
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -78,9 +75,11 @@ a:hover {
   color: lightgray;
 }
 
-#gh-link img, #tg-link img, #email img {
+#gh-link img,
+#tg-link img,
+#email img {
   height: 50px;
-  width: 50px; 
+  width: 50px;
 }
 
 h1 {
@@ -94,12 +93,11 @@ h2 {
   font-weight: lighter;
 }
 
-
 #about-p {
   text-align: left;
   font-size: 20px;
   margin: 50px;
-  padding: 10x 10%;
+  padding: 10px 10%;
   line-height: 2;
 }
 
@@ -113,16 +111,16 @@ h2 {
 }
 
 .content {
-  display: flex; 
+  display: flex;
 }
 
 .left-side {
-  width: 50%; 
+  width: 50%;
   padding: 10px;
 }
 
 .right-side {
-  width: 40%; 
+  width: 40%;
   padding: 30px;
 }
 
@@ -131,11 +129,14 @@ h2 {
   height: 550px;
 }
 
-#arrow {
+#arrow-top,
+#arrow-about,
+#arrow-skills {
   text-align: center;
-  margin: 40px;
+  margin: 40px auto;
   padding: 0;
 }
+
 
 #skills li {
   display: flex;
@@ -149,32 +150,30 @@ h2 {
 }
 
 #skills .rating-icon {
-  width: 152px; 
-  height: 24px; 
+  width: 152px;
+  height: 24px;
 }
 
 #skills span {
   font-size: 30px;
-  margin: 10px 0; 
+  margin: 10px 0;
 }
 
-#skills ul li {
-  margin: 5%; 
+#skills-list li {
+  margin: 5%;
 }
 
-
-#name-project {
+.name-project {
   font-weight: 300;
   text-align: center;
   font-size: 28px;
 }
 
-#description-project {
+.description-project {
   font-size: 20px;
   margin: 10px;
   padding: 0;
 }
-
 
 #projects .project-container {
   display: flex;
@@ -184,7 +183,7 @@ h2 {
 }
 
 #projects article {
-  flex: 1 1 45%;  
+  flex: 1 1 45%;
   margin: 10px;
 }
 
