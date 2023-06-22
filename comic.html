@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comic Page</title>
-    <body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <div id="comic-page">
+      <a href="index.html" id="home-link">Back to Home</a>
       <script>
         async function displayComic() {
           try {
@@ -26,15 +31,21 @@
             img.alt = comicData.alt;
 
             let title = document.createElement("p");
-            title.textContent = comicData.safe_title; 
+            title.textContent = comicData.safe_title;
 
             let date = document.createElement("p");
-            let dateObj = new Date(comicData.year, comicData.month - 1, comicData.day);
+            let dateObj = new Date(
+              comicData.year,
+              comicData.month - 1,
+              comicData.day
+            );
             date.textContent = dateObj.toLocaleDateString();
 
-            document.body.appendChild(title);
-            document.body.appendChild(img);
-            document.body.appendChild(date);
+            let comicPage = document.getElementById("comic-page");
+
+            comicPage.appendChild(title);
+            comicPage.appendChild(img);
+            comicPage.appendChild(date);
           } catch (error) {
             console.error("Error:", error);
           }
@@ -42,6 +53,6 @@
 
         displayComic();
       </script>
-    </body>
-  </head>
+    </div>
+  </body>
 </html>
