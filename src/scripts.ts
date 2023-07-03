@@ -1,6 +1,6 @@
 import { formatDistanceToNow } from 'date-fns';
 
-// Define interfaces for response data
+
 interface ComicResponse {
   img: string;
   alt: string;
