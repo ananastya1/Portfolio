@@ -10,49 +10,7 @@
   <body>
     <div id="comic-page">
       <a href="index.html" id="home-link">Back to Home</a>
-      <script>
-        async function displayComic() {
-          try {
-            let email = "a.barabanova@innopolis.university";
-            let params = new URLSearchParams({ email: email });
-            let response = await fetch(
-              "https://fwd.innopolis.university/api/hw2?" + params.toString()
-            );
-            let comicId = await response.json();
-            let comicParams = new URLSearchParams({ id: comicId });
-            let comicResponse = await fetch(
-              "https://fwd.innopolis.university/api/comic?" +
-                comicParams.toString()
-            );
-            let comicData = await comicResponse.json();
-
-            let img = document.createElement("img");
-            img.src = comicData.img;
-            img.alt = comicData.alt;
-
-            let title = document.createElement("p");
-            title.textContent = comicData.safe_title;
-
-            let date = document.createElement("p");
-            let dateObj = new Date(
-              comicData.year,
-              comicData.month - 1,
-              comicData.day
-            );
-            date.textContent = dateObj.toLocaleDateString();
-
-            let comicPage = document.getElementById("comic-page");
-
-            comicPage.appendChild(title);
-            comicPage.appendChild(img);
-            comicPage.appendChild(date);
-          } catch (error) {
-            console.error("Error:", error);
-          }
-        }
-
-        displayComic();
-      </script>
+      <script type="module" src="dist/bundle.js"></script>
     </div>
   </body>
 </html>
