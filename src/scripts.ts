@@ -1,5 +1,4 @@
-import { formatDistanceToNow } from 'date-fns';
-
+import { formatDistanceToNow } from "date-fns";
 
 interface ComicResponse {
   img: string;
@@ -9,7 +8,6 @@ interface ComicResponse {
   month: number;
   day: number;
 }
-
 
 async function displayComic(): Promise<void> {
   try {
@@ -42,19 +40,18 @@ async function displayComic(): Promise<void> {
     );
     date.textContent = dateObj.toLocaleDateString();
 
-  
     const fromNow: HTMLParagraphElement = document.createElement("p");
     fromNow.textContent = `${formatDistanceToNow(dateObj)} ago`;
 
     const comicPage: HTMLElement | null = document.getElementById("comic-page");
     if (!comicPage) {
-      throw new Error('Comic page element not found');
+      throw new Error("Comic page element not found");
     }
 
     comicPage.appendChild(title);
     comicPage.appendChild(img);
     comicPage.appendChild(date);
-    comicPage.appendChild(fromNow); 
+    comicPage.appendChild(fromNow);
   } catch (error: unknown) {
     console.error("Error:", error);
   }
