@@ -60,4 +60,4 @@ async function displayComic(): Promise<void> {
   }
 }
 
-displayComic();
+await displayComic();
