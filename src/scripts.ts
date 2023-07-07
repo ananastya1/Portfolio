@@ -9,6 +9,7 @@ interface ComicResponse {
   day: number;
 }
 
+
 async function displayComic(): Promise<void> {
   try {
     const email: string = "a.barabanova@innopolis.university";
